@@ -7,4 +7,5 @@
     <string name="age">Age</string>
     <string name="add">Add</string>
     <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>
