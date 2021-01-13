@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.techdoctorbd.roomdatabaseexample.R
-import com.techdoctorbd.roomdatabaseexample.UserViewModel
+import com.techdoctorbd.roomdatabaseexample.viewmodel.UserViewModel
 import com.techdoctorbd.roomdatabaseexample.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {

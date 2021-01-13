@@ -1,7 +1,8 @@
-package com.techdoctorbd.roomdatabaseexample.data
+package com.techdoctorbd.roomdatabaseexample.repository
 
 import androidx.lifecycle.LiveData
 import com.techdoctorbd.roomdatabaseexample.dao.UserDao
+import com.techdoctorbd.roomdatabaseexample.model.User
 
 class UserRepository(private val userDao: UserDao) {
 
@@ -9,5 +10,9 @@ class UserRepository(private val userDao: UserDao) {
 
     suspend fun addUser(user: User){
         userDao.addUser(user)
+    }
+
+    suspend fun updateUser(user: User){
+        userDao.updateUser(user)
     }
 }

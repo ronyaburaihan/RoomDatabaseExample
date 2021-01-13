@@ -1,12 +1,12 @@
-package com.techdoctorbd.roomdatabaseexample
+package com.techdoctorbd.roomdatabaseexample.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.techdoctorbd.roomdatabaseexample.data.User
+import com.techdoctorbd.roomdatabaseexample.model.User
 import com.techdoctorbd.roomdatabaseexample.data.UserDatabase
-import com.techdoctorbd.roomdatabaseexample.data.UserRepository
+import com.techdoctorbd.roomdatabaseexample.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -24,6 +24,12 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
     fun addUser(user: User) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.addUser(user)
+        }
+    }
+
+    fun updateUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateUser(user)
         }
     }
 }
